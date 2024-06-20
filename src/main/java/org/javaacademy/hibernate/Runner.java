@@ -1,6 +1,5 @@
 package org.javaacademy.hibernate;
 
-import jakarta.persistence.Query;
 import lombok.Cleanup;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,7 +8,6 @@ import org.hibernate.cfg.Environment;
 import org.javaacademy.hibernate.entity.Comment;
 import org.javaacademy.hibernate.entity.User;
 import org.javaacademy.hibernate.entity.Video;
-
 import java.util.Properties;
 
 public class Runner {
@@ -30,7 +28,7 @@ public class Runner {
                 .buildSessionFactory();
 
         Session session = sessionFactory.openSession();
-        /*session.beginTransaction();
+        session.beginTransaction();
         User john = new User("John");
         session.persist(john);
         User rick = new User("Rick");
@@ -42,7 +40,7 @@ public class Runner {
         Comment rickComment1 = new Comment(johnVideo1, rick, "cool interview");
         session.persist(rickComment1);
         session.getTransaction().commit();
-        session.clear();*/
+        session.clear();
 
         User johnUser = session.find(User.class, 1);
         Video findVideo = johnUser.getVideos().stream()

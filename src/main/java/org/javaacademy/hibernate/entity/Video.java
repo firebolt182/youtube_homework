@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-
 import java.util.List;
 
 @Entity
@@ -12,11 +11,14 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 public class Video {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     @Column
     private String name;
+
     @Column
     private String description;
 
