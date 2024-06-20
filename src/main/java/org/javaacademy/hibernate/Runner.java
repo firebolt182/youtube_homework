@@ -1,4 +1,4 @@
-package org.javaacademy;
+package org.javaacademy.hibernate;
 
 import jakarta.persistence.Query;
 import lombok.Cleanup;
